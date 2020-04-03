@@ -18,11 +18,13 @@ public class PersonController {
         this.personService = personService;
     }
 
+    // add person to DB
     @PostMapping
     public void addPerson(@RequestBody Person person){
         personService.addPerson(person);
     }
 
+    // get all persons from DB
     @GetMapping
     public List<Person> getAllPeople(){
         return personService.getAllPeople();
